@@ -1,0 +1,1 @@
+Perl dosyalarından bir tanesi bash dosyasını tetiklerek jvm kurulu olmayan hostları bulurken diğeri bu bilgiyi kullanarak gene perl dosyasının python kodunu tetiklemesiyle çalışır. Python kodu bir apiyi tetikleyerek jvm kurulmasını sağlar. Perl dosyaları ise scriptleri tetiklerken aynı zamanda mail atarak bilgiyi sağlar.
