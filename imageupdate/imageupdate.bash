@@ -29,13 +29,13 @@ do
 		add_alias=`perl /usy/liberty/addAlias/addAlias4one.pl $HOST` && echo -e "alias kontrolleri yapiliyor."
 		
 		
-		del_files1=`ssh -q $HOST rm /ibm/old_wlp/wlp/templates/servers/isbankSdfProfile/lib/AuxiliaryJars/log4j*` && echo -e "log4j ile ilgili eski jarlar siliniyor."
+		del_files1=`ssh -q $HOST rm /ibm/old_wlp/wlp/templates/servers/*********/lib/AuxiliaryJars/log4j*` && echo -e "log4j ile ilgili eski jarlar siliniyor."
 		
-		send_files1=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* wasadm@$HOST.isbank:/ibm/old_wlp/wlp/templates/servers/isbankSdfProfile/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
+		send_files1=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* user@$HOST.domain:/ibm/old_wlp/wlp/templates/servers/*********/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
 				
-		del_files2=`ssh -q $HOST rm /ibm/wlp/templates/servers/isbankSdfProfile/lib/AuxiliaryJars/log4j*` && echo -e "log4j ile ilgili eski jarlar siliniyor."
+		del_files2=`ssh -q $HOST rm /ibm/wlp/templates/servers/*********/lib/AuxiliaryJars/log4j*` && echo -e "log4j ile ilgili eski jarlar siliniyor."
 
-		send_files2=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* wasadm@$HOST.isbank:/ibm/wlp/templates/servers/isbankSdfProfile/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."		
+		send_files2=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* user@$HOST.domain:/ibm/wlp/templates/servers/*********/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."		
 				
 		echo -e "************************************************************ \n\n"
 	else
