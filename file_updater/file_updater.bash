@@ -45,12 +45,12 @@ do
 				
 				del_files=`ssh -q $HOST rm /ibm/servers/$jvmname/lib/AuxiliaryJars/log4j*` && echo -e "log4j ile ilgili eski jarlar siliniyor."
 
-				send_files=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* wasadm@$HOST.isbank:/ibm/servers/$jvmname/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
+				send_files=`scp /usy/liberty_file_updater/log4j_jars/log4j_2.16_jars/log4j* user@$HOST.domain:/ibm/servers/$jvmname/lib/AuxiliaryJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
 
 
 				# del_files2=`ssh -q $HOST rm /ibm/servers/$jvmname/lib/FrameworkJars/sdf-core*` && echo -e "sdf-core ile ilgili eski jarlar siliniyor."
 
-				# send_files2=`scp /usy/liberty_file_updater/sdf-core_jars/2021-12-15/sdf-core* wasadm@$HOST.isbank:/ibm/servers/$jvmname/lib/FrameworkJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
+				# send_files2=`scp /usy/liberty_file_updater/sdf-core_jars/2021-12-15/sdf-core* user@$HOST.domain:/ibm/servers/$jvmname/lib/FrameworkJars/` && echo -e "Yeni jarlar sunucuya gönderiliyor." || echo -e "Jarlar gonderilirken bir hata olustu."
 			
 			done
 			
