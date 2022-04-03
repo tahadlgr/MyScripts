@@ -38,13 +38,13 @@ my $full_name = "$sv_name"."$sv_num";
 
 if($sv_num == 01){
 	print "$server sunucusunda DMGR aciliyor.\n";
-	my $dmgr =`ssh -q $server bash /ibm/isbank_profiles/dmgr/bin/startManager.sh`;
+	my $dmgr =`ssh -q $server bash /ibm/**********/dmgr/bin/startManager.sh`;
 }
 
 print "$server sunucusundaki nodeagent dmgr ile sync ediliyor.\n";
-my $sync =`ssh -q $server bash /ibm/isbank_profiles/node$sv_num/bin/syncNode.sh $sv1_name`;
+my $sync =`ssh -q $server bash /ibm/**********/node$sv_num/bin/syncNode.sh $sv1_name`;
 
 print "Node start ediliyor.\n";
-my $node = `ssh -q $server bash /ibm/isbank_profiles/node$sv_num/bin/startNode.sh`;
+my $node = `ssh -q $server bash /ibm/**********/node$sv_num/bin/startNode.sh`;
 
 print "***Gerekli islemler tamamlanmistir. Konsoldan JVM'leri acabilirsiniz.***\n\n ";
