@@ -7,7 +7,7 @@ use re;
 
 
 
-my @HOSTS = ("klcamwas01", "klcamwas02", "klmbywas01", "klmbywas02", "klcamwas03", "klcamwas04", "klmbywas03", "klmbywas04");
+my @HOSTS = ("host01", "host02");
 
 my $FILE;
 
